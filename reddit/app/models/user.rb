@@ -7,6 +7,6 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password_digest, presence: true, length: { minimum: 6 }
-  has_many :posts
-  has_many :comments
+  has_many :posts, foreign_key: 'post_id'
+  has_many :comments, foreign_key: 'post_id'
 end
