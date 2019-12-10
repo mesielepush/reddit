@@ -4,7 +4,11 @@ linters:
 files:
   ignore:
     - "bin/*"
-    - "db/*"
+    - "db/**"
     - "config/*"
     - "Guardfile"
     - "Rakefile"
+    - "config/environments/production.rb"
+    - "config/environments/test.rb"
+    - "config/environments/puma.rb"
+    - "config/environments/spring.rb"
